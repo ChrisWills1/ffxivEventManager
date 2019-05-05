@@ -8,6 +8,7 @@ public class User {
 	private String addressLine2;
 	private String townCity;
 	private String postCode;
+	private String country;
 	private String mobileNum;
 	private String facebook;
 	private String instagram;
@@ -17,7 +18,6 @@ public class User {
 	private String password;
 	static int index = 0;
 	private int defaultPasswordLength = 10;
-	
 	
 	// constructor to create a User only required information is a name at the start
 	public User(String fName, String sName) {
@@ -48,7 +48,7 @@ public class User {
 	// create a random password from a string of accepted characters
 	public String createRandomPassword(int pWordLength) {
 		
-		String acceptedChars = "abcdefghijklmnopqrstuvwxyz.,/;'#[]{}:@~<>?!£$%^&)(_+";
+		String acceptedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ|.,/;'#[]{}:@~<>?!£$%^&)(_+";
 		
 		char[] password = new char[pWordLength];
 		
@@ -121,6 +121,14 @@ public class User {
 		return postCode;
 	}
 	
+	public void setCountry(String ctry) {
+		this.country = ctry;
+	}
+	
+	public String getCountry() {
+		return country;
+	}
+	
 	public void setMobileNum(String mobNum) {
 		this.mobileNum = mobNum;
 	}
@@ -171,6 +179,7 @@ public class User {
 							"\nAddress Line 2: " + addressLine2 +
 							"\nTown/City: " + townCity + 
 							"\nPostcode: " + postCode + 
+							"\nCountry: " + country +
 							"\nMobile Number: " + mobileNum + 
 							"\nFacebook: " + facebook + 
 							"\nInstagram: " + instagram +
