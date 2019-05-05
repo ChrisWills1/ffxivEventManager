@@ -61,7 +61,7 @@ public class Player extends User {
 		String game;
 		String cType;
 		int level;
-		String isMain;
+		boolean isMain;
 		
 		do {
 			System.out.println("****** New Character *******");
@@ -88,9 +88,9 @@ public class Player extends User {
 				
 				// takes the input from the question of if it is the main class and returns true/false depending on the input.
 				if(mainClass.equals("true")) {
-					isMain = "true";
+					isMain = true;
 				} else {
-					isMain = "false";
+					isMain = false;
 				}
 			
 				// asks the user if they would like to add another character.

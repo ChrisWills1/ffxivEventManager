@@ -14,16 +14,16 @@ public class Character {
 	private String altClassType;
 	
 	// constructor for a character, takes a name, game, class type, current server, level and if it is the main. Assumed to be active on create.
-	public Character(String cName, String game, String cType, int cLevel, String mainChar) {
+	public Character(String cName, String game, String cType, int cLevel, boolean mainChar) {
 		
 		this.charName = cName;
 		this.whichGame = game;
 		this.classType = cType;
 		this.currentLevel = cLevel;
 		
-		if(mainChar == "true") {
+		if(mainChar == true) {
 			this.isMainChar = true;
-		} else if(mainChar == "false") {
+		} else if(mainChar == false) {
 			this.isMainChar = false;
 		}
 		
