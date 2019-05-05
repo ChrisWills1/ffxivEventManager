@@ -2,27 +2,30 @@ package ffxivEventManager;
 
 public class User {
 
-	String forename;
-	String surname;
-	String addressLine1;
-	String addressLine2;
-	String townCity;
-	String postCode;
-	String mobileNum;
-	String facebook;
-	String instagram;
-	String discord;
-	String whatsapp;
-	String uniqueUserID;
-	String password;
+	private String forename;
+	private String surname;
+	private String addressLine1;
+	private String addressLine2;
+	private String townCity;
+	private String postCode;
+	private String mobileNum;
+	private String facebook;
+	private String instagram;
+	private String discord;
+	private String whatsapp;
+	private String uniqueUserID;
+	private String password;
 	static int index = 0;
-	int defaultPasswordLength = 10;
+	private int defaultPasswordLength = 10;
 	
 	
 	// constructor to create a User only required information is a name at the start
 	public User(String fName, String sName) {
 		this.forename = fName;
 		this.surname = sName;
+		
+		this.password = createRandomPassword(defaultPasswordLength);
+		this.uniqueUserID = createUniqueID(index);
 		
 	}
 	
@@ -66,78 +69,92 @@ public class User {
 	}
 	
 	// change password
-	public void setPassword() {
-		
+	public void setPassword(String pWord) {
+		this.password = pWord;
 	}
 	
+	public String getPassword() {
+		return password;
+	}
 	
+	public String getForename() {
+		return forename;
+	}
 	
-	public void setAddress1() {
+	public String getSurname() {
+		return surname;
+	}
+	
+	public String getUniqueID() {
+		return uniqueUserID;
+	}
 		
+	public void setAddress1(String add1) {
+		this.addressLine1 = add1;
 	}
 	
 	public String getAddress1() {
 		return addressLine1;	
 	}
 	
-	public void setAddress2() {
-		
+	public void setAddress2(String add2) {
+		this.addressLine2 = add2;
 	}
 	
 	public String getAddress2() {
 		return addressLine2;
 	}
 	
-	public void setTownCity() {
-		
+	public void setTownCity(String twnCty) {
+		this.townCity = twnCty;
 	}
 	
 	public String getTownCity() {
 		return townCity;
 	}
 	
-	public void setPostCode() {
-		
+	public void setPostCode(String pCode) {
+		this.postCode = pCode;
 	}
 	
 	public String getPostCode() {
 		return postCode;
 	}
 	
-	public void setMobileNum() {
-		
+	public void setMobileNum(String mobNum) {
+		this.mobileNum = mobNum;
 	}
 	
 	public String getMobileNum() {
 		return mobileNum;
 	}
 	
-	public void setFacebook() {
-		
+	public void setFacebook(String fBook) {
+		this.facebook = fBook;
 	}
 	
 	public String getFacebook() {
 		return facebook;
 	}
 	
-	public void setInstagram() {
-		
+	public void setInstagram(String igram) {
+		this.instagram = igram;
 	}
 	
 	public String getInstagram() {
 		return instagram;
 	}
 	
-	public void setDiscord() {
-		
+	public void setDiscord(String dcord) {
+		this.discord = dcord;
 	}
 	
 	public String getDiscord() {
 		return discord;
 	}
 	
-	public void setWhatsapp() {
-		
+	public void setWhatsapp(String wApp) {
+		this.whatsapp = wApp;
 	}
 	
 	public String getWhatsapp() {
@@ -146,6 +163,19 @@ public class User {
 	
 	// show user information
 	public void showUserInfo() {
+		System.out.println("The Details for the current user are:" + 
+							"\nName is: " + forename + " " + surname +
+							"\nUnique User ID: " + uniqueUserID + 
+							"\nPassword: " + password + 
+							"\nAddress Line 1: " + addressLine1 + 
+							"\nAddress Line 2: " + addressLine2 +
+							"\nTown/City: " + townCity + 
+							"\nPostcode: " + postCode + 
+							"\nMobile Number: " + mobileNum + 
+							"\nFacebook: " + facebook + 
+							"\nInstagram: " + instagram +
+							"\nDiscord: " + discord + 
+							"\nWhatsapp: " + whatsapp);
 		
 	}
 	
