@@ -37,10 +37,4 @@ The Key outcome of the project is to have the following functionality: Basic fun
 - Show details about the character
 - Update character details
  
-This project will have a simple swing GUI which will be used to test the functionality above. This GUI will have the following:
-
-- Log in page
-- Home page
-- Events page
-- Characters page
-- Users page
+The project will have a User Interface developed using HTML, CSS and javascript. This will be the front end of the project allowing a modern looking interface to interact with the back-end. 
